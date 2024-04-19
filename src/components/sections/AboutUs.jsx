@@ -35,16 +35,20 @@ const About = () => (
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white z-10"
       >
-        <span className="font-extrabold ">Lorem</span> ipsum dolor sit amet
-        consectetur adipisicing elit. Amet aut cupiditate praesentium eius
-        doloremque explicabo ipsa dignissimos sapiente, beatae eos aliquam sequi
-        perferendis facilis nesciunt distinctio{" "}
-        <span className="font-extrabold ">asperiores </span> doloribus sed
-        nobis. Quidem nostrum a accusantium veritatis maiores deleniti quasi
-        quod velit mollitia alias reprehenderit{" "}
-        <span className="font-extrabold ">oooyui </span> molestias deserunt
-        repudiandae culpa quas aperiam placeat, dolorem aliquid amet porro enim.
-        Tenetur aliquam error non?
+        Welcome to SOW Tech, your{" "}
+        <span className="font-extrabold ">trusted</span> outsourcing agency for
+        top-notch services in website development, app development, web app
+        development, cyber security, and XR development. Our team of{" "}
+        <span className="font-extrabold ">highly skilled and experienced</span>{" "}
+        professionals is dedicated to delivering innovative and cutting-edge
+        solutions that meet the unique needs of our clients. At SOW Tech, we
+        believe in the power of technology to transform businesses and improve
+        people&#39;s lives. That&#39;s why we&#39;re committed to providing our
+        clients with the highest quality services, backed by the latest
+        technologies and best practices. Whether you&#39;re looking to build a
+        new website, develop a mobile app, enhance your cyber security, or
+        create immersive XR experiences, we have the expertise to help you
+        achieve your goals.
       </motion.p>
       <motion.img
         variants={fadeIn("up", "tween", 0.3, 1)}

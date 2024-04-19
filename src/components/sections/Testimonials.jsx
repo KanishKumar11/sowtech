@@ -1,10 +1,22 @@
 "use client";
 import { CardStack } from "../ui/card-stack";
 import { cn } from "@/utils/cn";
+import React, { useEffect, useState } from "react";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 export function Testimonials() {
   return (
-    <div className="h-[40rem] flex items-center justify-center w-full">
-      <CardStack items={CARDS} />
+    <div className="h-[52rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden ">
+      <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-300 text-center sm:text-4xl uppercase">
+        TESTIMONIALS{" "}
+      </h2>
+      <p className="mt-6 text-lg text-center leading-8 text-gray-600 dark:text-slate-200 mb-20">
+        What our clients say{" "}
+      </p>
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
     </div>
   );
 }
@@ -23,43 +35,34 @@ export const Highlight = ({ children, className }) => {
   );
 };
 
-const CARDS = [
+const testimonials = [
   {
-    id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
-    content: (
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p>
-    ),
+    quote:
+      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+    name: "Charles Dickens",
+    title: "A Tale of Two Cities",
   },
   {
-    id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
-    content: (
-      <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
-      </p>
-    ),
+    quote:
+      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    name: "William Shakespeare",
+    title: "Hamlet",
   },
   {
-    id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
-    content: (
-      <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
-      </p>
-    ),
+    quote: "All that we see or seem is but a dream within a dream.",
+    name: "Edgar Allan Poe",
+    title: "A Dream Within a Dream",
+  },
+  {
+    quote:
+      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+    name: "Jane Austen",
+    title: "Pride and Prejudice",
+  },
+  {
+    quote:
+      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+    name: "Herman Melville",
+    title: "Moby-Dick",
   },
 ];
